@@ -1,0 +1,28 @@
+Tha name Recieved are {{context.names}}
+The age is {{context.numbers}}
+<br>
+
+The minimum age is {{context.numbers|min}}<br>
+The maximum age is {{context.numbers|max}}<br>
+
+The sorted number is 
+
+{{ context.names|sort}}
+<br>
+
+{% for a_name in context.names %}
+     {{a_name|lower}}
+     <br>
+{% endfor %}
+
+<h1>Iterate in reverse order</h1>
+{% for a_num in context.numbers %}
+{% if a_num is divisibleby 3%}
+  {{a_num}} is Divisible
+{% else %}
+  {{ a_num}} is not Divisible
+
+  {% endif %}
+  <br>
+
+{% endfor %}
